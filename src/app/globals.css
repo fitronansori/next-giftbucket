@@ -42,6 +42,7 @@
   --radius-lg: var(--radius);
   --radius-xl: calc(var(--radius) + 4px);
   --font-inter: var(--font-inter);
+  --font-great-vibes: var(--font-great-vibes);
 }
 
 :root {
@@ -128,5 +129,5 @@
 }
 
 @utility container {
-  @apply max-w-[1440] mx-auto px-4 2xl:px-0;
+  @apply max-w-[1440px] mx-auto px-4 2xl:px-0;
 }
