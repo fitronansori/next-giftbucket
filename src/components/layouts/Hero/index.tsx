@@ -9,7 +9,7 @@ const Hero = () => {
       <div className="container py-10 md:h-[calc(100vh-64px)] flex items-center justify-center">
         <div className="w-full lg:h-[500px] flex flex-col lg:flex-row items-center justify-between gap-8">
           <div className="lg:flex-1 h-full flex flex-col items-center lg:items-start justify-center  gap-4 lg:gap-8">
-            <h2 className="text-3xl md:text-6xl font-bold text-center lg:text-start">
+            <h2 className="text-3xl md:text-5xl font-bold text-center lg:text-start">
               Gift Bucket Unik untuk Semua Momen
             </h2>
 
