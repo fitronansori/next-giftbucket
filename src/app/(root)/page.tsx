@@ -1,10 +1,10 @@
-import { Button } from "@/components/ui/button";
+import Hero from "@/components/layouts/Hero";
 
 const HomePage = () => {
   return (
-    <div className="container">
-      <Button>Click Me</Button>
-    </div>
+    <>
+      <Hero />
+    </>
   );
 };
 export default HomePage;
