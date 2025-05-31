@@ -43,7 +43,7 @@ const CategoryCard = ({ category }: CategoryCardProps) => {
         </CardDescription>
       </CardHeader>
 
-      <CardContent className="">
+      <CardContent>
         <div className="mb-4">
           <p className="text-2xl font-bold text-primary mb-3">
             Mulai dari Rp {category.price}
