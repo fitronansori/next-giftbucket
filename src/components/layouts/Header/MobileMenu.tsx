@@ -27,7 +27,7 @@ const MobileMenu = () => {
 
         <NavLinks
           className="w-full h-screen flex-col items-center justify-center"
-          classNameLink="text-2xl"
+          class_name_link="text-2xl"
         />
       </SheetContent>
     </Sheet>
