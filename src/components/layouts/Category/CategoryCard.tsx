@@ -24,10 +24,10 @@ const CategoryCard = ({ category }: CategoryCardProps) => {
           src={category.image || "/placeholder.svg"}
           alt={category.title}
           fill
+          sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
           className="object-cover transition-transform duration-300 group-hover:scale-105"
         />
       </div>
-
       {/* Card Header */}
       <CardHeader className="space-y-4">
         <div className="flex items-center gap-3">
@@ -44,7 +44,6 @@ const CategoryCard = ({ category }: CategoryCardProps) => {
           {category.description}
         </CardDescription>
       </CardHeader>
-
       {/* Card Content */}
       <CardContent className="space-y-4">
         {/* Price Section */}

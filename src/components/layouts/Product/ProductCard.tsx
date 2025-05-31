@@ -33,6 +33,7 @@ const ProductCard = ({ product }: ProductCardProps) => {
           src={product.image || "/placeholder.svg"}
           alt={product.name}
           fill
+          sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
           className="rounded-t-xl object-cover"
         />
 
@@ -60,7 +61,6 @@ const ProductCard = ({ product }: ProductCardProps) => {
           </div>
         )}
       </div>
-
       <CardHeader className="space-y-3">
         {/* Category and Rating Row */}
         <div className="flex items-center justify-between">
@@ -85,7 +85,6 @@ const ProductCard = ({ product }: ProductCardProps) => {
           </CardDescription>
         </div>
       </CardHeader>
-
       <CardContent className="space-y-4">
         {/* Price Section */}
         <div className="space-y-1">
