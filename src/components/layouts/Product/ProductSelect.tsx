@@ -17,7 +17,7 @@ const ProductSelect = ({ onCategoryChange }: ProductSelectProps) => {
   return (
     <div className="w-full min-w-[200px] sm:w-auto">
       <Select defaultValue="all" onValueChange={onCategoryChange}>
-        <SelectTrigger className="rounded-full border-input bg-background transition-colors hover:border-primary focus:border-primary focus:ring-2 focus:ring-primary/20">
+        <SelectTrigger className="rounded-md border-input bg-background transition-colors hover:border-primary focus:border-primary focus:ring-2 focus:ring-primary/20">
           <SelectValue placeholder="Pilih kategori" />
         </SelectTrigger>
         <SelectContent className="rounded-lg">
