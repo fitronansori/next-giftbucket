@@ -231,8 +231,8 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ### Ansori Dev
 
-- GitHub: [@your-github-username](https://github.com/your-github-username)
-- Website: [your-website.com](https://your-website.com)
+- GitHub: [@fitronansori](https://github.com/fitronansori)
+- Website: [ansoridev.site](http://ansoridev.site/)
 
 ## 🙏 Acknowledgments
 
