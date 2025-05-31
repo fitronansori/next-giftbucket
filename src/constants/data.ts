@@ -426,8 +426,8 @@ export const contact_info: TContactInfo[] = [
   {
     icon: MapPinIcon,
     title: "Alamat Toko",
-    content: "Jl. Merdeka No. 123, Jakarta Pusat",
-    sub_content: "Jakarta 10110, Indonesia",
+    content: "Jl. Mataram No. 123, NTB",
+    sub_content: "Lombok, Indonesia",
   },
   {
     icon: PhoneIcon,
