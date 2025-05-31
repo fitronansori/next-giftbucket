@@ -9,7 +9,8 @@ const Product = () => {
   return (
     <section className="py-10 lg:py-14">
       <div className="container space-y-8">
-        <div className="flex flex-col md:flex-row items-center justify-between gap-y-4">
+        {/* Header Section */}
+        <div className="flex flex-col items-center justify-between gap-y-4 md:flex-row md:gap-y-0">
           <Title
             title="Koleksi Produk Unggulan"
             subtitle="Setiap gift bucket dibuat dengan cinta dan perhatian detail untuk menciptakan kebahagiaan yang tak terlupakan."
@@ -17,15 +18,19 @@ const Product = () => {
             subClassName="max-w-[500px]"
           />
 
-          <Button size={"lg"} asChild>
-            <Link href={"/produk-kami"}>
-              <ShoppingBagIcon className="size-5" />
+          <Button size="lg" asChild className="shrink-0">
+            <Link
+              href="/produk-kami"
+              className="flex items-center gap-2 transition-colors hover:bg-primary/90"
+            >
+              <ShoppingBagIcon className="h-5 w-5" />
               Semua Produk
             </Link>
           </Button>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        {/* Products Grid */}
+        <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-4">
           {productsData.slice(0, 4).map((item) => (
             <ProductCard key={item.id} product={item} />
           ))}

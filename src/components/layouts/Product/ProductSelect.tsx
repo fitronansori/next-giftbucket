@@ -15,16 +15,22 @@ type ProductSelectProps = {
 
 const ProductSelect = ({ onCategoryChange }: ProductSelectProps) => {
   return (
-    <div>
+    <div className="w-full min-w-[200px] sm:w-auto">
       <Select defaultValue="all" onValueChange={onCategoryChange}>
-        <SelectTrigger className="rounded-full">
+        <SelectTrigger className="rounded-full border-input bg-background transition-colors hover:border-primary focus:border-primary focus:ring-2 focus:ring-primary/20">
           <SelectValue placeholder="Pilih kategori" />
         </SelectTrigger>
-        <SelectContent>
+        <SelectContent className="rounded-lg">
           <SelectGroup>
-            <SelectLabel>Kategori</SelectLabel>
+            <SelectLabel className="font-medium text-muted-foreground">
+              Kategori
+            </SelectLabel>
             {categoriesData.map((category) => (
-              <SelectItem key={category.value} value={category.value}>
+              <SelectItem
+                key={category.value}
+                value={category.value}
+                className="cursor-pointer transition-colors hover:bg-primary hover:text-primary-foreground focus:bg-primary focus:text-primary-foreground"
+              >
                 {category.label}
               </SelectItem>
             ))}

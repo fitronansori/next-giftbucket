@@ -6,20 +6,22 @@ type SearchProductProps = {
 };
 
 const SearchProduct = ({ onSearchChange }: SearchProductProps) => {
-  const handleSearchChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const handle_search_change = (e: React.ChangeEvent<HTMLInputElement>) => {
     onSearchChange(e.target.value);
   };
 
   return (
-    <form>
-      <div className="relative flex items-center rounded-md border focus-within:ring-1 focus-within:ring-ring pl-2">
-        <SearchIcon className="size-5 text-muted-foreground" />
+    <form className="w-full min-w-[250px] sm:w-auto">
+      <div className="relative flex items-center rounded-md border border-input bg-background transition-colors hover:border-primary focus-within:border-primary focus-within:ring-2 focus-within:ring-primary/20">
+        <div className="flex items-center justify-center pl-3">
+          <SearchIcon className="h-5 w-5 text-muted-foreground" />
+        </div>
 
         <Input
           type="text"
-          placeholder="Search produk..."
-          className="border-0 focus-visible:ring-0 shadow-none"
-          onChange={handleSearchChange}
+          placeholder="Cari produk..."
+          className="border-0 bg-transparent shadow-none focus-visible:ring-0"
+          onChange={handle_search_change}
         />
       </div>
     </form>
