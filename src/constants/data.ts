@@ -16,6 +16,9 @@ import {
   HeartHandshakeIcon,
   HeartIcon,
   LucideIcon,
+  MapPinIcon,
+  PhoneIcon,
+  MailIcon,
 } from "lucide-react";
 
 export type TCategory = {
@@ -409,5 +412,51 @@ export const pricing_plans: TPricingPlan[] = [
       "Photo documentation",
     ],
     badge_variant: "secondary",
+  },
+];
+
+export type TContactInfo = {
+  icon: LucideIcon;
+  title: string;
+  content: string;
+  sub_content: string;
+};
+
+export const contact_info: TContactInfo[] = [
+  {
+    icon: MapPinIcon,
+    title: "Alamat Toko",
+    content: "Jl. Merdeka No. 123, Jakarta Pusat",
+    sub_content: "Jakarta 10110, Indonesia",
+  },
+  {
+    icon: PhoneIcon,
+    title: "Nomor Telepon",
+    content: "+62 812-3456-7890",
+    sub_content: "Senin - Sabtu: 08:00 - 20:00",
+  },
+  {
+    icon: MailIcon,
+    title: "Email",
+    content: "info@giftbucket.com",
+    sub_content: "Respons dalam 24 jam",
+  },
+];
+
+export const business_hours = [
+  {
+    day: "Senin - Jumat",
+    hours: "08:00 - 20:00",
+    is_closed: false,
+  },
+  {
+    day: "Sabtu",
+    hours: "09:00 - 18:00",
+    is_closed: false,
+  },
+  {
+    day: "Minggu",
+    hours: "Tutup",
+    is_closed: true,
   },
 ];
