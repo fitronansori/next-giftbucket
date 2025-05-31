@@ -17,55 +17,66 @@ type CategoryCardProps = {
 
 const CategoryCard = ({ category }: CategoryCardProps) => {
   return (
-    <Card className="pt-0 dark:shadow-lg dark:shadow-primary gap-4">
-      <div className="relative w-full h-80">
+    <Card className="pt-0 group overflow-hidden transition-all duration-300 hover:shadow-xl dark:shadow-lg dark:shadow-primary/20 dark:hover:shadow-primary/30">
+      {/* Image Container */}
+      <div className="relative w-full h-64 md:h-72 lg:h-80 overflow-hidden">
         <Image
           src={category.image || "/placeholder.svg"}
           alt={category.title}
           fill
-          className="size-full object-cover rounded-t-xl"
+          className="object-cover transition-transform duration-300 group-hover:scale-105"
         />
       </div>
 
-      <CardHeader>
-        <div className="flex items-center gap-3 mb-2">
-          <div className="p-2 bg-primary/10 rounded-full text-primary">
-            <category.icon />
+      {/* Card Header */}
+      <CardHeader className="space-y-4">
+        <div className="flex items-center gap-3">
+          <div className="flex-shrink-0 p-2 bg-primary/10 rounded-full text-primary">
+            <category.icon className="w-5 h-5" />
           </div>
 
-          <CardTitle className="text-xl font-semibold dark:text-white">
+          <CardTitle className="text-lg md:text-xl font-semibold text-foreground line-clamp-1">
             {category.title}
           </CardTitle>
         </div>
 
-        <CardDescription className="text-muted-foreground leading-relaxed line-clamp-2">
+        <CardDescription className="text-sm md:text-base text-muted-foreground leading-relaxed line-clamp-2">
           {category.description}
         </CardDescription>
       </CardHeader>
 
-      <CardContent>
-        <div className="mb-4">
-          <p className="text-2xl font-bold text-primary mb-3">
+      {/* Card Content */}
+      <CardContent className="space-y-4">
+        {/* Price Section */}
+        <div className="space-y-3">
+          <p className="text-xl md:text-2xl font-bold text-primary">
             Mulai dari Rp {category.price}
           </p>
 
+          {/* Features List */}
           <ul className="space-y-2">
             {category.features.map((feature, index) => (
               <li
                 key={index}
-                className="flex items-center text-sm text-muted-foreground"
+                className="flex items-start gap-3 text-sm text-muted-foreground"
               >
-                <div className="w-2 h-2 bg-primary rounded-full mr-3"></div>
-                {feature}
+                <div className="flex-shrink-0 w-2 h-2 bg-primary rounded-full mt-2" />
+                <span className="flex-1">{feature}</span>
               </li>
             ))}
           </ul>
         </div>
 
-        <div className="flex gap-2">
-          <Button size={"lg"} asChild>
-            <Link href={"/"} className="w-full">
-              <MessageSquareMoreIcon className="size-5" /> Pesan Sekarang
+        {/* Action Button */}
+        <div className="pt-2">
+          <Button
+            size="lg"
+            asChild
+            className="w-full transition-all duration-300 hover:scale-[1.02]"
+          >
+            <Link href="/" className="flex items-center justify-center gap-2">
+              <MessageSquareMoreIcon className="w-5 h-5" />
+              <span>Pesan Sekarang</span>
             </Link>
           </Button>
         </div>
