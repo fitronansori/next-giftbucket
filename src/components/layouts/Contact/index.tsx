@@ -71,19 +71,18 @@ const Contact = () => {
   return (
     <section className="py-10 lg:py-14">
       <div className="container space-y-8">
-        <div className="mb-16">
+        <div className="">
           <Badge variant="outline" className="mb-4 mx-auto flex w-fit">
-            <MessageSquareIcon className="w-4 h-4 mr-2" />
+            <MessageSquareIcon className="w-4 h-4" />
             Hubungi Kami
           </Badge>
 
           <Title
             title="Mari Berkreasi Bersama"
             subtitle="Punya ide gift bucket yang unik? Atau ingin konsultasi untuk momen spesial Anda?"
-            className="mb-4"
-            subClassName="text-lg max-w-2xl mx-auto"
           />
         </div>
+
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16">
           {/* Contact Form */}
           <div>
@@ -95,6 +94,7 @@ const Contact = () => {
                   Anda kembali.
                 </CardDescription>
               </CardHeader>
+
               <CardContent>
                 <form onSubmit={handleSubmit} className="space-y-6">
                   <div className="grid sm:grid-cols-2 gap-4">
