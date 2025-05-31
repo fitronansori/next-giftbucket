@@ -12,7 +12,7 @@ const Logo = () => {
         className="size-10 cursor-pointer"
       />
 
-      <h1 className="text-2xl text-primary font-great-vibes">Gift Bucket</h1>
+      <h1 className="text-primary font-great-vibes text-2xl">Gift Bucket</h1>
     </Link>
   );
 };

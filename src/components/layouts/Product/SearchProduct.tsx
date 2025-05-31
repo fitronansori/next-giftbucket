@@ -1,5 +1,6 @@
-import { Input } from "@/components/ui/input";
 import { SearchIcon } from "lucide-react";
+
+import { Input } from "@/components/ui/input";
 
 type SearchProductProps = {
   onSearchChange: (value: string) => void;
@@ -12,9 +13,9 @@ const SearchProduct = ({ onSearchChange }: SearchProductProps) => {
 
   return (
     <form className="w-full min-w-[250px] sm:w-auto">
-      <div className="relative flex items-center rounded-md border border-input bg-background transition-colors hover:border-primary focus-within:border-primary focus-within:ring-2 focus-within:ring-primary/20">
+      <div className="border-input bg-background hover:border-primary focus-within:border-primary focus-within:ring-primary/20 relative flex items-center rounded-md border transition-colors focus-within:ring-2">
         <div className="flex items-center justify-center pl-3">
-          <SearchIcon className="h-5 w-5 text-muted-foreground" />
+          <SearchIcon className="text-muted-foreground h-5 w-5" />
         </div>
 
         <Input

@@ -1,4 +1,5 @@
 import Link from "next/link";
+
 import Logo from "../../common/Logo";
 
 const Footer = () => {
@@ -8,11 +9,11 @@ const Footer = () => {
     <footer className="border-t">
       <div className="container py-8">
         {/* Main Footer Content */}
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 gap-8 md:grid-cols-4">
           {/* Company Info */}
           <div className="space-y-4">
             <Logo />
-            <p className="text-sm text-muted-foreground">
+            <p className="text-muted-foreground text-sm">
               Platform terpercaya untuk hadiah dan produk berkualitas dengan
               layanan terbaik.
             </p>
@@ -20,7 +21,7 @@ const Footer = () => {
 
           {/* Quick Links */}
           <div className="space-y-4">
-            <h3 className="font-semibold text-foreground">Menu Utama</h3>
+            <h3 className="text-foreground font-semibold">Menu Utama</h3>
             <ul className="space-y-2 text-sm">
               <li>
                 <Link
@@ -40,7 +41,7 @@ const Footer = () => {
               </li>
               <li>
                 <Link
-                  href="/tentang"
+                  href="/"
                   className="text-muted-foreground hover:text-foreground transition-colors"
                 >
                   Tentang Kami
@@ -48,7 +49,7 @@ const Footer = () => {
               </li>
               <li>
                 <Link
-                  href="/kontak"
+                  href="#kontak"
                   className="text-muted-foreground hover:text-foreground transition-colors"
                 >
                   Kontak
@@ -59,11 +60,11 @@ const Footer = () => {
 
           {/* Categories */}
           <div className="space-y-4">
-            <h3 className="font-semibold text-foreground">Kategori</h3>
+            <h3 className="text-foreground font-semibold">Kategori</h3>
             <ul className="space-y-2 text-sm">
               <li>
                 <Link
-                  href="/kategori/elektronik"
+                  href="/"
                   className="text-muted-foreground hover:text-foreground transition-colors"
                 >
                   Elektronik
@@ -71,7 +72,7 @@ const Footer = () => {
               </li>
               <li>
                 <Link
-                  href="/kategori/fashion"
+                  href="/"
                   className="text-muted-foreground hover:text-foreground transition-colors"
                 >
                   Fashion
@@ -79,7 +80,7 @@ const Footer = () => {
               </li>
               <li>
                 <Link
-                  href="/kategori/rumah"
+                  href="/"
                   className="text-muted-foreground hover:text-foreground transition-colors"
                 >
                   Rumah & Dekorasi
@@ -87,7 +88,7 @@ const Footer = () => {
               </li>
               <li>
                 <Link
-                  href="/kategori/hadiah"
+                  href="/"
                   className="text-muted-foreground hover:text-foreground transition-colors"
                 >
                   Hadiah Spesial
@@ -98,13 +99,13 @@ const Footer = () => {
 
           {/* Contact Info */}
           <div className="space-y-4">
-            <h3 className="font-semibold text-foreground">Hubungi Kami</h3>
-            <div className="space-y-2 text-sm text-muted-foreground">
+            <h3 className="text-foreground font-semibold">Hubungi Kami</h3>
+            <div className="text-muted-foreground space-y-2 text-sm">
               <p>📧 info@giftbucket.com</p>
               <p>📱 +62 812-3456-7890</p>
               <p>📍 Lombok, Indonesia</p>
 
-              <div className="flex space-x-4 mt-4">
+              <div className="mt-4 flex space-x-4">
                 <Link
                   href="#"
                   className="hover:text-foreground transition-colors"
@@ -129,9 +130,9 @@ const Footer = () => {
         </div>
 
         {/* Bottom Bar */}
-        <div className="mt-8 pt-8 border-t border-border">
-          <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
-            <p className="text-sm text-muted-foreground">
+        <div className="border-border mt-8 border-t pt-8">
+          <div className="flex flex-col items-center justify-between space-y-4 md:flex-row md:space-y-0">
+            <p className="text-muted-foreground text-sm">
               © {current_year} Gift Bucket. Semua hak dilindungi.
             </p>
 

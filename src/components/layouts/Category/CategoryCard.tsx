@@ -1,3 +1,8 @@
+import Image from "next/image";
+import Link from "next/link";
+
+import { MessageSquareMoreIcon } from "lucide-react";
+
 import { Button } from "@/components/ui/button";
 import {
   Card,
@@ -6,10 +11,8 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
+
 import { TCategory } from "@/constants/data";
-import { MessageSquareMoreIcon } from "lucide-react";
-import Image from "next/image";
-import Link from "next/link";
 
 type CategoryCardProps = {
   category: TCategory;
@@ -17,9 +20,9 @@ type CategoryCardProps = {
 
 const CategoryCard = ({ category }: CategoryCardProps) => {
   return (
-    <Card className="pt-0 group overflow-hidden transition-all duration-300 hover:shadow-xl dark:shadow-lg dark:shadow-primary/20 dark:hover:shadow-primary/30">
+    <Card className="group dark:shadow-primary/20 dark:hover:shadow-primary/30 overflow-hidden pt-0 transition-all duration-300 hover:shadow-xl dark:shadow-lg">
       {/* Image Container */}
-      <div className="relative w-full h-64 md:h-72 lg:h-80 overflow-hidden">
+      <div className="relative h-64 w-full overflow-hidden md:h-72 lg:h-80">
         <Image
           src={category.image || "/placeholder.svg"}
           alt={category.title}
@@ -31,16 +34,16 @@ const CategoryCard = ({ category }: CategoryCardProps) => {
       {/* Card Header */}
       <CardHeader className="space-y-4">
         <div className="flex items-center gap-3">
-          <div className="flex-shrink-0 p-2 bg-primary/10 rounded-full text-primary">
-            <category.icon className="w-5 h-5" />
+          <div className="bg-primary/10 text-primary flex-shrink-0 rounded-full p-2">
+            <category.icon className="h-5 w-5" />
           </div>
 
-          <CardTitle className="text-lg md:text-xl font-semibold text-foreground line-clamp-1">
+          <CardTitle className="text-foreground line-clamp-1 text-lg font-semibold md:text-xl">
             {category.title}
           </CardTitle>
         </div>
 
-        <CardDescription className="text-sm md:text-base text-muted-foreground leading-relaxed line-clamp-2">
+        <CardDescription className="text-muted-foreground line-clamp-2 text-sm leading-relaxed md:text-base">
           {category.description}
         </CardDescription>
       </CardHeader>
@@ -48,7 +51,7 @@ const CategoryCard = ({ category }: CategoryCardProps) => {
       <CardContent className="space-y-4">
         {/* Price Section */}
         <div className="space-y-3">
-          <p className="text-xl md:text-2xl font-bold text-primary">
+          <p className="text-primary text-xl font-bold md:text-2xl">
             Mulai dari Rp {category.price}
           </p>
 
@@ -57,9 +60,9 @@ const CategoryCard = ({ category }: CategoryCardProps) => {
             {category.features.map((feature, index) => (
               <li
                 key={index}
-                className="flex items-start gap-3 text-sm text-muted-foreground"
+                className="text-muted-foreground flex items-start gap-3 text-sm"
               >
-                <div className="flex-shrink-0 w-2 h-2 bg-primary rounded-full mt-2" />
+                <div className="bg-primary mt-2 h-2 w-2 flex-shrink-0 rounded-full" />
                 <span className="flex-1">{feature}</span>
               </li>
             ))}
@@ -74,7 +77,7 @@ const CategoryCard = ({ category }: CategoryCardProps) => {
             className="w-full transition-all duration-300 hover:scale-[1.02]"
           >
             <Link href="/" className="flex items-center justify-center gap-2">
-              <MessageSquareMoreIcon className="w-5 h-5" />
+              <MessageSquareMoreIcon className="h-5 w-5" />
               <span>Pesan Sekarang</span>
             </Link>
           </Button>

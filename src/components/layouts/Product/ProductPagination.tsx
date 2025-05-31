@@ -25,7 +25,7 @@ const ProductPagination = ({
       <PaginationLink
         isActive={is_active}
         onClick={() => on_page_change(page)}
-        className="cursor-pointer transition-colors hover:bg-primary hover:text-primary-foreground"
+        className="hover:bg-primary hover:text-primary-foreground cursor-pointer transition-colors"
       >
         {page}
       </PaginationLink>

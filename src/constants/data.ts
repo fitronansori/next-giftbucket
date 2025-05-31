@@ -1,3 +1,16 @@
+import {
+  CrownIcon,
+  Flower2Icon,
+  GiftIcon,
+  GraduationCapIcon,
+  HeartHandshakeIcon,
+  HeartIcon,
+  LucideIcon,
+  MailIcon,
+  MapPinIcon,
+  PhoneIcon,
+} from "lucide-react";
+
 export const categoriesData = [
   { value: "all", label: "Semua Kategori" },
   { value: "wedding", label: "Wedding" },
@@ -7,19 +20,6 @@ export const categoriesData = [
   { value: "valentine", label: "Valentine" },
   { value: "sympathy", label: "Sympathy" },
 ];
-
-import {
-  CrownIcon,
-  Flower2Icon,
-  GiftIcon,
-  GraduationCapIcon,
-  HeartHandshakeIcon,
-  HeartIcon,
-  LucideIcon,
-  MapPinIcon,
-  PhoneIcon,
-  MailIcon,
-} from "lucide-react";
 
 export type TCategory = {
   id: number;

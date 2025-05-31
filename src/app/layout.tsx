@@ -1,8 +1,11 @@
 import type { Metadata } from "next";
-import { Inter, Great_Vibes } from "next/font/google";
-import "./globals.css";
-import { cn } from "@/lib/utils";
+import { Great_Vibes, Inter } from "next/font/google";
+
 import { ThemeProvider } from "@/components/provider/theme-provider";
+
+import { cn } from "@/lib/utils";
+
+import "./globals.css";
 
 const inter = Inter({
   variable: "--font-inter",

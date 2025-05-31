@@ -1,11 +1,13 @@
 "use client";
 
-import { useState, useMemo, useEffect } from "react";
+import { useEffect, useMemo, useState } from "react";
+
 import Title from "@/components/common/Title";
 import ProductCard from "@/components/layouts/Product/ProductCard";
 import ProductPagination from "@/components/layouts/Product/ProductPagination";
 import ProductSelect from "@/components/layouts/Product/ProductSelect";
 import SearchProduct from "@/components/layouts/Product/SearchProduct";
+
 import { productsData } from "@/constants/data";
 
 const ProductPage = () => {
@@ -16,7 +18,7 @@ const ProductPage = () => {
 
   // Filter and search logic
   const filtered_products = useMemo(() => {
-    return productsData.filter((product) => {
+    return productsData.filter(product => {
       const matches_search =
         product.name.toLowerCase().includes(search_term.toLowerCase()) ||
         product.description.toLowerCase().includes(search_term.toLowerCase());
@@ -60,12 +62,12 @@ const ProductPage = () => {
         {/* Products Grid Section */}
         <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-4">
           {current_products.length > 0 ? (
-            current_products.map((item) => (
+            current_products.map(item => (
               <ProductCard key={item.id} product={item} />
             ))
           ) : (
             <div className="col-span-full py-12 text-center">
-              <p className="text-lg text-muted-foreground">
+              <p className="text-muted-foreground text-lg">
                 Tidak ada produk yang ditemukan
               </p>
             </div>

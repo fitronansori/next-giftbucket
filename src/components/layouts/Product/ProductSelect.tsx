@@ -7,6 +7,7 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
+
 import { categoriesData } from "@/constants/data";
 
 type ProductSelectProps = {
@@ -17,19 +18,19 @@ const ProductSelect = ({ onCategoryChange }: ProductSelectProps) => {
   return (
     <div className="w-full min-w-[200px] sm:w-auto">
       <Select defaultValue="all" onValueChange={onCategoryChange}>
-        <SelectTrigger className="rounded-md border-input bg-background transition-colors hover:border-primary focus:border-primary focus:ring-2 focus:ring-primary/20">
+        <SelectTrigger className="border-input bg-background hover:border-primary focus:border-primary focus:ring-primary/20 rounded-md transition-colors focus:ring-2">
           <SelectValue placeholder="Pilih kategori" />
         </SelectTrigger>
         <SelectContent className="rounded-lg">
           <SelectGroup>
-            <SelectLabel className="font-medium text-muted-foreground">
+            <SelectLabel className="text-muted-foreground font-medium">
               Kategori
             </SelectLabel>
-            {categoriesData.map((category) => (
+            {categoriesData.map(category => (
               <SelectItem
                 key={category.value}
                 value={category.value}
-                className="cursor-pointer transition-colors hover:bg-primary hover:text-primary-foreground focus:bg-primary focus:text-primary-foreground"
+                className="hover:bg-primary hover:text-primary-foreground focus:bg-primary focus:text-primary-foreground cursor-pointer transition-colors"
               >
                 {category.label}
               </SelectItem>

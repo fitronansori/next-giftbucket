@@ -1,8 +1,13 @@
-import Title from "@/components/common/Title";
-import { Button } from "@/components/ui/button";
-import { productsData } from "@/constants/data";
-import { ShoppingBagIcon } from "lucide-react";
 import Link from "next/link";
+
+import { ShoppingBagIcon } from "lucide-react";
+
+import { Button } from "@/components/ui/button";
+
+import Title from "@/components/common/Title";
+
+import { productsData } from "@/constants/data";
+
 import ProductCard from "./ProductCard";
 
 const Product = () => {
@@ -21,7 +26,7 @@ const Product = () => {
           <Button size="lg" asChild className="shrink-0">
             <Link
               href="/produk-kami"
-              className="flex items-center gap-2 transition-colors hover:bg-primary/90"
+              className="hover:bg-primary/90 flex items-center gap-2 transition-colors"
             >
               <ShoppingBagIcon className="h-5 w-5" />
               Semua Produk
@@ -31,7 +36,7 @@ const Product = () => {
 
         {/* Products Grid */}
         <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-4">
-          {productsData.slice(0, 4).map((item) => (
+          {productsData.slice(0, 4).map(item => (
             <ProductCard key={item.id} product={item} />
           ))}
         </div>

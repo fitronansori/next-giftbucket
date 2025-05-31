@@ -1,3 +1,8 @@
+import Image from "next/image";
+import Link from "next/link";
+
+import { MessageSquareMoreIcon, StarIcon } from "lucide-react";
+
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import {
@@ -7,10 +12,8 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
+
 import { TProduct } from "@/constants/data";
-import { MessageSquareMoreIcon, StarIcon } from "lucide-react";
-import Image from "next/image";
-import Link from "next/link";
 
 type ProductCardProps = {
   product: TProduct;
@@ -26,7 +29,7 @@ const ProductCard = ({ product }: ProductCardProps) => {
   };
 
   return (
-    <Card className="gap-4 pt-0 shadow-md transition-all duration-300 hover:shadow-lg dark:shadow-lg dark:shadow-primary dark:hover:shadow-xl">
+    <Card className="dark:shadow-primary gap-4 pt-0 shadow-md transition-all duration-300 hover:shadow-lg dark:shadow-lg dark:hover:shadow-xl">
       {/* Product Image Section */}
       <div className="relative h-80 w-full">
         <Image
@@ -40,21 +43,21 @@ const ProductCard = ({ product }: ProductCardProps) => {
         {/* Badge */}
         <Badge
           variant={product.badgeVariant}
-          className="absolute left-3 top-3 z-10"
+          className="absolute top-3 left-3 z-10"
         >
           {product.badge}
         </Badge>
 
         {/* Discount Badge */}
         {product.discount && (
-          <Badge variant="destructive" className="absolute right-3 top-3 z-10">
+          <Badge variant="destructive" className="absolute top-3 right-3 z-10">
             -{product.discount}%
           </Badge>
         )}
 
         {/* Stock Status Overlay */}
         {!product.inStock && (
-          <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 rounded-t-xl">
+          <div className="bg-opacity-50 absolute inset-0 flex items-center justify-center rounded-t-xl bg-black">
             <Badge variant="secondary" className="px-4 py-2 text-lg">
               Stok Habis
             </Badge>
@@ -80,7 +83,7 @@ const ProductCard = ({ product }: ProductCardProps) => {
           <CardTitle className="line-clamp-2 text-lg font-semibold">
             {product.name}
           </CardTitle>
-          <CardDescription className="line-clamp-2 text-sm text-muted-foreground">
+          <CardDescription className="text-muted-foreground line-clamp-2 text-sm">
             {product.description}
           </CardDescription>
         </div>
@@ -89,11 +92,11 @@ const ProductCard = ({ product }: ProductCardProps) => {
         {/* Price Section */}
         <div className="space-y-1">
           <div className="flex items-center gap-2">
-            <span className="text-2xl font-bold text-primary">
+            <span className="text-primary text-2xl font-bold">
               {format_price(product.price)}
             </span>
             {product.originalPrice && (
-              <span className="text-sm text-muted-foreground line-through">
+              <span className="text-muted-foreground text-sm line-through">
                 {format_price(product.originalPrice)}
               </span>
             )}

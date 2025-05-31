@@ -1,3 +1,7 @@
+import Link from "next/link";
+
+import { CheckIcon, MessageSquareMoreIcon } from "lucide-react";
+
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import {
@@ -7,9 +11,8 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
+
 import { TPricingPlan } from "@/constants/data";
-import { CheckIcon, MessageSquareMoreIcon } from "lucide-react";
-import Link from "next/link";
 
 type PriceCardProps = {
   pricing_plan: TPricingPlan;
@@ -26,7 +29,7 @@ const PriceCard = ({ pricing_plan }: PriceCardProps) => {
 
   return (
     <Card
-      className={`dark:shadow-lg gap-4 relative ${
+      className={`relative gap-4 dark:shadow-lg ${
         pricing_plan.popular
           ? "border-primary dark:shadow-primary scale-105"
           : "dark:shadow-primary"
@@ -40,15 +43,15 @@ const PriceCard = ({ pricing_plan }: PriceCardProps) => {
             </Badge>
           )}
 
-          <CardTitle className="text-2xl font-bold mb-2">
+          <CardTitle className="mb-2 text-2xl font-bold">
             {pricing_plan.name}
           </CardTitle>
 
           <div className="mb-3">
-            <span className="text-4xl font-bold text-primary">
+            <span className="text-primary text-4xl font-bold">
               {format_price(pricing_plan.price)}
             </span>
-            <span className="text-muted-foreground text-sm ml-1">/paket</span>
+            <span className="text-muted-foreground ml-1 text-sm">/paket</span>
           </div>
 
           <CardDescription className="text-muted-foreground leading-relaxed">
@@ -62,7 +65,7 @@ const PriceCard = ({ pricing_plan }: PriceCardProps) => {
           <ul className="space-y-3">
             {pricing_plan.features.map((feature, index) => (
               <li key={index} className="flex items-start text-sm">
-                <CheckIcon className="w-5 h-5 text-primary mr-3 mt-0.5 flex-shrink-0" />
+                <CheckIcon className="text-primary mt-0.5 mr-3 h-5 w-5 flex-shrink-0" />
                 <span>{feature}</span>
               </li>
             ))}
@@ -78,7 +81,7 @@ const PriceCard = ({ pricing_plan }: PriceCardProps) => {
           asChild
         >
           <Link href="#kontak">
-            <MessageSquareMoreIcon className="size-5 mr-2" />
+            <MessageSquareMoreIcon className="mr-2 size-5" />
             Pilih Paket
           </Link>
         </Button>

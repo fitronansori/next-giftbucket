@@ -1,3 +1,5 @@
+import { AlignJustifyIcon } from "lucide-react";
+
 import {
   Sheet,
   SheetContent,
@@ -6,8 +8,8 @@ import {
   SheetTitle,
   SheetTrigger,
 } from "@/components/ui/sheet";
+
 import NavLinks from "./NavLinks";
-import { AlignJustifyIcon } from "lucide-react";
 
 const MobileMenu = () => {
   return (
@@ -26,7 +28,7 @@ const MobileMenu = () => {
         </SheetHeader>
 
         <NavLinks
-          className="w-full h-screen flex-col items-center justify-center"
+          className="h-screen w-full flex-col items-center justify-center"
           class_name_link="text-2xl"
         />
       </SheetContent>

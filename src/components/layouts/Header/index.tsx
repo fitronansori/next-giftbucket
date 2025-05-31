@@ -1,14 +1,18 @@
-import Logo from "@/components/common/Logo";
-import NavLinks from "./NavLinks";
-import MobileMenu from "./MobileMenu";
-import ThemeToggle from "@/components/common/ThemeToggle";
-import { Button } from "@/components/ui/button";
 import Link from "next/link";
+
 import { MessageSquareMoreIcon } from "lucide-react";
+
+import { Button } from "@/components/ui/button";
+
+import Logo from "@/components/common/Logo";
+import ThemeToggle from "@/components/common/ThemeToggle";
+
+import MobileMenu from "./MobileMenu";
+import NavLinks from "./NavLinks";
 
 const Header = () => {
   return (
-    <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+    <header className="bg-background/95 supports-[backdrop-filter]:bg-background/60 sticky top-0 z-50 w-full border-b backdrop-blur">
       <div className="container flex h-16 items-center justify-between">
         {/* Logo Section */}
         <div className="flex items-center">

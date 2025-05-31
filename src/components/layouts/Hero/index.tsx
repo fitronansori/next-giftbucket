@@ -1,32 +1,34 @@
-import { Button } from "@/components/ui/button";
-import { FlowerIcon, MessageSquareMoreIcon } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
+
+import { FlowerIcon, MessageSquareMoreIcon } from "lucide-react";
+
+import { Button } from "@/components/ui/button";
 
 const Hero = () => {
   return (
     <section className="min-h-screen">
-      <div className="container py-10 md:h-[calc(100vh-64px)] flex items-center justify-center">
-        <div className="w-full lg:h-[500px] flex flex-col lg:flex-row items-center justify-between gap-8 lg:gap-12">
+      <div className="container flex items-center justify-center py-10 md:h-[calc(100vh-64px)]">
+        <div className="flex w-full flex-col items-center justify-between gap-8 lg:h-[500px] lg:flex-row lg:gap-12">
           {/* Content Section */}
-          <div className="lg:flex-1 h-full flex flex-col items-center lg:items-start justify-center gap-4 lg:gap-8">
-            <h1 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-center lg:text-left leading-tight">
+          <div className="flex h-full flex-col items-center justify-center gap-4 lg:flex-1 lg:items-start lg:gap-8">
+            <h1 className="text-center text-3xl leading-tight font-bold md:text-4xl lg:text-left lg:text-5xl xl:text-6xl">
               Gift Bucket Unik untuk Semua Momen
             </h1>
 
-            <p className="max-w-lg text-sm md:text-base lg:text-lg text-muted-foreground text-center lg:text-left leading-relaxed">
+            <p className="text-muted-foreground max-w-lg text-center text-sm leading-relaxed md:text-base lg:text-left lg:text-lg">
               Ciptakan kebahagiaan tak terlupakan dengan gift bucket premium
               yang dirancang khusus dengan cinta untuk setiap momen spesial.
             </p>
 
-            <div className="flex flex-col sm:flex-row items-center gap-4 w-full sm:w-auto">
+            <div className="flex w-full flex-col items-center gap-4 sm:w-auto sm:flex-row">
               <Button
                 size="lg"
-                className="w-full sm:w-auto flex items-center gap-2 px-6 py-3"
+                className="flex w-full items-center gap-2 px-6 py-3 sm:w-auto"
                 asChild
               >
                 <Link href="/">
-                  <MessageSquareMoreIcon className="w-5 h-5" />
+                  <MessageSquareMoreIcon className="h-5 w-5" />
                   Pesan Sekarang
                 </Link>
               </Button>
@@ -34,11 +36,11 @@ const Hero = () => {
               <Button
                 size="lg"
                 variant="outline"
-                className="w-full sm:w-auto flex items-center gap-2 px-6 py-3"
+                className="flex w-full items-center gap-2 px-6 py-3 sm:w-auto"
                 asChild
               >
                 <Link href="/">
-                  <FlowerIcon className="w-5 h-5" />
+                  <FlowerIcon className="h-5 w-5" />
                   Lihat Koleksi
                 </Link>
               </Button>
@@ -46,14 +48,14 @@ const Hero = () => {
           </div>
 
           {/* Image Section */}
-          <div className="w-full lg:flex-1 h-[350px] md:h-[450px] lg:h-full relative">
+          <div className="relative h-[350px] w-full md:h-[450px] lg:h-full lg:flex-1">
             <Image
               src="/assets/images/hero.png"
               alt="Hero Image"
               fill
               priority
               sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 40vw"
-              className="object-cover rounded-2xl shadow-2xl dark:shadow-primary/20 transition-shadow duration-300"
+              className="dark:shadow-primary/20 rounded-2xl object-cover shadow-2xl transition-shadow duration-300"
             />
           </div>
         </div>

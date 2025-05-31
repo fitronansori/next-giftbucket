@@ -1,23 +1,28 @@
 "use client";
 
 import { useState } from "react";
+
+import { MessageSquareIcon, SendIcon } from "lucide-react";
+
+import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
-import { Textarea } from "@/components/ui/textarea";
 import {
   Card,
   CardContent,
+  CardDescription,
   CardHeader,
   CardTitle,
-  CardDescription,
 } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
-import { SendIcon, MessageSquareIcon } from "lucide-react";
-import { contact_info } from "@/constants/data";
-import ContactCard from "./ContactCard";
-import BusinessHoursCard from "./BusinessHoursCard";
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
+import { Textarea } from "@/components/ui/textarea";
+
 import Title from "@/components/common/Title";
+
+import { contact_info } from "@/constants/data";
+
+import BusinessHoursCard from "./BusinessHoursCard";
+import ContactCard from "./ContactCard";
 
 interface ContactFormData {
   full_name: string;
@@ -42,7 +47,7 @@ const Contact = () => {
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
   ) => {
     const { name, value } = e.target;
-    setFormData((prev) => ({
+    setFormData(prev => ({
       ...prev,
       [name]: value,
     }));
@@ -72,8 +77,8 @@ const Contact = () => {
     <section className="py-10 lg:py-14">
       <div className="container space-y-8">
         <div className="">
-          <Badge variant="outline" className="mb-4 mx-auto flex w-fit">
-            <MessageSquareIcon className="w-4 h-4" />
+          <Badge variant="outline" className="mx-auto mb-4 flex w-fit">
+            <MessageSquareIcon className="h-4 w-4" />
             Hubungi Kami
           </Badge>
 
@@ -83,7 +88,7 @@ const Contact = () => {
           />
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16">
+        <div className="grid gap-12 lg:grid-cols-2 lg:gap-16">
           {/* Contact Form */}
           <div>
             <Card>
@@ -97,7 +102,7 @@ const Contact = () => {
 
               <CardContent>
                 <form onSubmit={handleSubmit} className="space-y-6">
-                  <div className="grid sm:grid-cols-2 gap-4">
+                  <div className="grid gap-4 sm:grid-cols-2">
                     <div className="space-y-2">
                       <Label htmlFor="full_name">Nama Lengkap *</Label>
                       <Input
@@ -173,12 +178,12 @@ const Contact = () => {
                   >
                     {is_submitting ? (
                       <>
-                        <div className="w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin mr-2" />
+                        <div className="mr-2 h-4 w-4 animate-spin rounded-full border-2 border-white border-t-transparent" />
                         Mengirim...
                       </>
                     ) : (
                       <>
-                        <SendIcon className="w-4 h-4 mr-2" />
+                        <SendIcon className="mr-2 h-4 w-4" />
                         Kirim Pesan
                       </>
                     )}
