@@ -346,3 +346,68 @@ export const productsData = [
     discount: 11,
   },
 ];
+
+export type TPricingPlan = {
+  id: number;
+  name: string;
+  price: number;
+  popular: boolean;
+  description: string;
+  features: string[];
+  badge?: string;
+  badge_variant: "default" | "secondary" | "destructive" | "outline";
+};
+
+export const pricing_plans: TPricingPlan[] = [
+  {
+    id: 1,
+    name: "Paket Basic",
+    price: 150000,
+    popular: false,
+    description: "Perfect untuk hadiah sederhana dan momen spesial sehari-hari",
+    features: [
+      "5-7 tangkai bunga segar",
+      "Kemasan kertas premium",
+      "Kartu ucapan gratis",
+      "Pengiriman area Jabodetabek",
+      "Garansi kesegaran 3 hari",
+    ],
+    badge_variant: "outline",
+  },
+  {
+    id: 2,
+    name: "Paket Premium",
+    price: 285000,
+    popular: true,
+    description: "Pilihan terbaik untuk acara special dan momen berkesan",
+    features: [
+      "10-15 tangkai bunga premium",
+      "Kemasan kotak mewah",
+      "Kartu ucapan custom",
+      "Cokelat premium included",
+      "Pengiriman seluruh Indonesia",
+      "Garansi kesegaran 5 hari",
+      "Konsultasi desain gratis",
+    ],
+    badge: "Most Popular",
+    badge_variant: "default",
+  },
+  {
+    id: 3,
+    name: "Paket Luxury",
+    price: 450000,
+    popular: false,
+    description: "Eksklusif untuk momen terpenting dalam hidup Anda",
+    features: [
+      "20-25 tangkai bunga import",
+      "Kemasan luxury box + ribbon",
+      "Kartu ucapan handwritten",
+      "Premium chocolate & wine",
+      "Express delivery 24/7",
+      "Garansi kesegaran 7 hari",
+      "Personal florist consultation",
+      "Photo documentation",
+    ],
+    badge_variant: "secondary",
+  },
+];
