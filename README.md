@@ -50,7 +50,7 @@ Website layanan gift bucket custom yang dibuat dengan Next.js, React, dan Tailwi
 ### Clone Repository
 
 ```bash
-git clone https://github.com/your-username/next-giftbucket.git
+git clone https://github.com/fitronansori/next-giftbucket.git
 cd next-giftbucket
 ```
 
