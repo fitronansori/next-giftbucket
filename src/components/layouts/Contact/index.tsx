@@ -51,6 +51,9 @@ const Contact = () => {
     e.preventDefault();
     setIsSubmitting(true);
 
+    // Log form data to console
+    console.log("Contact Form Submitted:", form_data);
+
     setIsSubmitting(false);
 
     // Reset form after 3 seconds
